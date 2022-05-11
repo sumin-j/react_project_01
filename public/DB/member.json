@@ -1,0 +1,41 @@
+{
+    "members" : [
+        {
+            "name" : "Christoper",
+            "position" : "CEO",
+            "pic" : "member1.jpg",
+            "num" : "01"
+        },
+        {
+            "name" : "Charth",
+            "position" : "Vice President",
+            "pic" : "member2.jpg",
+            "num" : "02"
+
+        },
+        {
+            "name" : "David",
+            "position" : "Director",
+            "pic" : "member3.jpg",
+            "num" : "03"
+        },
+        {
+            "name" : "Laura",
+            "position" : "Team manager",
+            "pic" : "member4.jpg",
+            "num" : "04"
+        },
+        {
+            "name" : "Catherine",
+            "position" : "Staff",
+            "pic" : "member5.jpg",
+            "num" : "05"
+        },
+        {
+            "name" : "Grace",
+            "position" : "Staff",
+            "pic" : "member6.jpg",
+            "num" : "06"
+        }
+    ]
+}
