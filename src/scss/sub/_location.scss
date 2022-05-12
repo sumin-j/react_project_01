@@ -1,0 +1,43 @@
+.map {
+    width: 1180px;
+    margin: 0 auto;
+    padding: 100px 0;
+    position: relative;
+    &::after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+    #map {
+        width: 50%;
+        height: 400px;
+        margin-bottom: 20px;
+    }
+    button {
+        float: left;
+        font-size: 20px;
+        color: #1f464a;
+        border: 2px solid #1f464a;
+        border-radius: 25px;
+        padding: 8px;
+        background: #fff;
+    }
+    ul {
+        float: left;
+        position: absolute;
+        bottom: 105px;
+        left: 360px;
+        li {
+            float: left;
+            font-size: 14px;
+            margin-right: 10px;
+            padding :8px;
+            border: 1px solid #1f464a;
+            border-radius: 30px;
+            &.on {
+                color: #fff;
+                background: #1f464a;
+            }
+        }
+    }
+}
