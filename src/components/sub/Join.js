@@ -1,6 +1,8 @@
 import Layout from '../common/Layout';
 import {useState, useEffect} from 'react';
 
+const path = process.env.PUBLIC_URL;
+
 function Join() {
   const initVal = {
     id : '',
@@ -190,8 +192,18 @@ function Join() {
           </tbody>
         </table>
       </fieldset>
+
+      <div className="wrap">
+        <div className="pic1">
+        <img src={`${path}/assets/join1.jpg`} alt="" />      
+        </div>
+        <div className='pic2'>
+        <img src={`${path}/assets/join2.jpg`} alt="" />
+        </div>
+      </div>
     </form>
 
+    
     </>
   )
 }

@@ -105,6 +105,7 @@ function Location() {
       <section className="map">
         <div id="map" ref={container}></div>
 
+
       <button onClick={()=>setTraffic(!traffic)}>
         {traffic ? 'Traffic Off' : 'Traffic On'}
       </button>
@@ -119,6 +120,8 @@ function Location() {
           )
         })}
       </ul>
+
+      
       </section>
     </>
   )

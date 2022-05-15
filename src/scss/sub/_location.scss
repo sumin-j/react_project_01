@@ -1,5 +1,6 @@
 .map {
     width: 1180px;
+    height: auto;
     margin: 0 auto;
     padding: 100px 0;
     position: relative;
@@ -9,9 +10,10 @@
         clear: both;
     }
     #map {
-        width: 50%;
+        width: 600px;
         height: 400px;
         margin-bottom: 20px;
+        
     }
     button {
         float: left;

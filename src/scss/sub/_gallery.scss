@@ -1,0 +1,108 @@
+.loading {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.wrap {
+    width: 1180px;
+    min-height: 1800px;
+    padding: 40px 0;
+    margin: 0 auto;
+    position: relative;
+    &::after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+    .interest_button {
+        float: left;
+        position: absolute;
+        left: 40%;
+        transform: translateX(-50%);
+        width: 120px;
+        height: 50px;
+        background: #fff;
+        border: 2px solid #1f464a;
+        border-radius: 40px;
+        padding: 6px;
+        margin-bottom: 20px;
+        font-size: 14px;
+        color: #1f464a;
+        cursor: pointer;
+    }
+
+    .searchBox {
+        float: right;
+        position: relative;
+        right: 400px;
+        top: 10px;
+        input[type=text] {
+            width: 130px;
+            height: 20px;
+            margin-right: 10px;
+            background: #efefef;
+            border: 1px solid #1f464a;
+            border-radius: 4px;
+        }
+
+        button {
+            border: none;
+            border-radius: 20px;
+            background: #1f464a;
+            font-size: 16px;
+            color: #fff;
+            padding: 8px;
+        }
+    }
+    
+    .frame {
+        transform: translateY(200px);
+        opacity: 0;
+        transition: 1s;
+        min-height: 400px;
+        position: relative;
+        top: 120px;
+        &::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+    
+        &.on {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        article {
+            float: left;
+            width: 20%;
+            padding: 10px;
+            
+            .inner {
+                width: 250px;
+                height: 300px;
+                padding: 20px;
+                .pic {
+                    width: 100%;
+                    height: 250px;
+                    object-fit: cover;
+                    margin-bottom: 12px;
+                    cursor: pointer;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                h2 {
+                    font-size: 16px;
+                    color: #1f464a;
+                    text-align: center;
+                    margin-bottom: 30px;
+                    word-wrap: break-word;
+                }
+            }
+        }
+    }
+}
