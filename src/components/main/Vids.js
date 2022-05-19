@@ -11,6 +11,9 @@ function Vids() {
     <>
       <section id="vids" className='myScroll'>
         <h2>Recent Youtube</h2>
+        <p>The Moment with Things,<br/>
+        Lost between hope and reality<br/> finding and wandering again</p>
+        <a href="#">MORE</a>
         <ul>
           {vidData.map((vid,idx)=>{
             if(idx < 3) {
@@ -20,6 +23,7 @@ function Vids() {
                   pop.current.open();
                 }}>
                   <img src={vid.snippet.thumbnails.medium.url} />
+                  <span>full of taste</span>
                 </li>
               );
             }

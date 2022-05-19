@@ -46,12 +46,23 @@ header {
             }
         }
 
-        .myPage {
-            font-size: 28px;
-            color: #000;
-            position: absolute;
-            right: 0;
-            bottom: 20px;
+        .util {
+            position: relative;
+            padding: 20px;
+            top: 10px;
+            right: -500px;
+            .myPage {
+                font-size: 28px;
+                color: #000;
+                position: absolute;
+            }
+    
+            .menuMo {
+                position: absolute;
+                font-size: 24px;
+                color: #1f464a;
+                display: none;
+            }
         }
     }
 
@@ -75,8 +86,18 @@ header {
                 left: 30px;   
             }
 
-            .myPage {
-                right: 30px;
+            #gnb {
+                display: none;
+            }
+
+            .util {
+                .myPage {
+                    right: 80px;
+                }
+    
+                .menuMo {
+                    display: block;
+                }
             }
         }
     }

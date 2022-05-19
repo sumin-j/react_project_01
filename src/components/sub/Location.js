@@ -105,7 +105,6 @@ function Location() {
       <section className="map">
         <div id="map" ref={container}></div>
 
-
       <button onClick={()=>setTraffic(!traffic)}>
         {traffic ? 'Traffic Off' : 'Traffic On'}
       </button>
@@ -121,8 +120,59 @@ function Location() {
         })}
       </ul>
 
+      <article className='contact'>
+        <h2>Contact us</h2>
+        <p>
+          Fell free to contact us any time. <br/>
+          We will get back to you as soon as we can!
+        </p>
+
+        <form action="#">
+          <label htmlFor="name">NAME</label>
+          <input type="text" placeholder='name' id='name'/><br/>
+          <label htmlFor="email">E-MAIL</label>
+          <input type="email" placeholder='email' id='email'/><br/>
+          <label htmlFor="message">MESSAGE</label>
+          <input type="text" placeholder='messsage' id='message'/><br/>
+
+          <input type="submit" value='Send'/>
+        </form>
+
+        
+
+        
+      </article>
+
       
       </section>
+
+      <section className='ad'>
+          <h2>Getting organized feels better with Open Spaces</h2>
+          <div className="wrap">
+            <div className="inner">
+              <div className="pic">
+                <img src={`${path}/assets/ad1.jpg`} alt="ad1" />
+              </div>
+                <p>Responsibly-sourced materials for a lower impact</p>
+      
+            </div>
+            <div className="inner">
+              <div className="pic">
+                <img src={`${path}/assets/ad2.jpg`} alt="ad2" />
+                </div>
+                <p>No single-use plastics in our products or<br/> packaging</p>
+            </div>
+            <div className="inner">
+              <div className="pic">
+                <img src={`${path}/assets/ad3.jpg`} alt="ad3" />
+                </div>
+                <p>Premium, long-lasting quality at an affordable<br/> price</p>
+              
+            </div>
+          </div>
+        </section>
+
+      
     </>
   )
 }

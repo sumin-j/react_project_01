@@ -28,7 +28,7 @@ function Department() {
       </Layout>
 
 
-      <ul className='memberList'>
+      
         <section className='banner'>
           <div className="inner">
              <h2>
@@ -40,6 +40,7 @@ a difference
               </p>
           </div>
         </section>
+      <section className="member">
       {members.map((member,idx)=>{
           return  (
             <li key={idx}>
@@ -64,7 +65,8 @@ a difference
             </li>
           )
         })}
-      </ul>
+      </section>
+      
       
       </>
       

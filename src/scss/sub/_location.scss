@@ -4,15 +4,29 @@
     margin: 0 auto;
     padding: 100px 0;
     position: relative;
+    overflow: hidden;
+
     &::after {
         content: '';
         display: block;
         clear: both;
     }
+
+    &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 100px;
+        height: 200px;
+        background: #1f464a;
+        top: 12%;
+        left: 44%;
+    }
     #map {
         width: 600px;
         height: 400px;
-        margin-bottom: 20px;
+        margin-bottom: 20px; 
+        
         
     }
     button {
@@ -20,26 +34,145 @@
         font-size: 20px;
         color: #1f464a;
         border: 2px solid #1f464a;
-        border-radius: 25px;
+        border-radius: 4px;
         padding: 8px;
         background: #fff;
+        cursor: pointer;
     }
     ul {
         float: left;
         position: absolute;
-        bottom: 105px;
-        left: 360px;
+        bottom: 100px;
+        left: 380px;
         li {
             float: left;
             font-size: 14px;
             margin-right: 10px;
             padding :8px;
             border: 1px solid #1f464a;
-            border-radius: 30px;
+            border-radius: 4px;
+            cursor: pointer;
             &.on {
                 color: #fff;
                 background: #1f464a;
             }
         }
     }
+
+    .contact {
+        width: 380px;
+        position: absolute;
+        right: 0;
+        top: 100px;
+        h2 {
+            font-size: 32px;
+            color: #1f464a;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 20px;
+            &::after {
+                content: '';
+                display: block;
+                width: 70px;
+                height: 4px;
+                position: absolute;
+                left: 115px;
+                background: #1f464a;
+            }
+        }
+        p {
+            font-size: 20px;
+            line-height: 1.2;
+            color: #1f464a;
+            text-align: center;
+            margin-bottom: 32px;
+        }
+        form {
+            padding: 0;
+            label {
+                display: block;
+                font-size: 18px;
+                color: #1f464a;
+                padding: 8px;
+            }
+            input[type=text],[type=email] {
+                width: 180px;
+                height: 30px;
+                border: none;
+                background: #efefef;
+                padding-left: 10px;
+                margin: 4px;
+                &:nth-of-type(3) {
+                    width: 300px;
+                    height: 75px;
+                }
+            }
+            input[type=submit] {
+                position: absolute;
+                width: 200px;
+                height: 25px;
+                left: 100px;
+                background: #1f464a;
+                font-size: 16px;
+                color: #fff;
+                border: none;
+                border-radius: 4px;
+                padding: 0 20px;
+                margin-top: 26px;
+                cursor: pointer;
+            }
+        }
+    }
 }
+
+.ad {
+    padding: 60px;
+    background: #efebe6;
+    
+    h2 {
+        font-size: 28px;
+        font-weight: 700;
+        text-align: center;
+        color: #1f464a;
+    }
+
+    .wrap {
+        width: 1180px;
+        margin: 0 auto;
+        &::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+        .inner {
+            float: left;
+            width: 380px;
+            
+            .pic {
+                width: 100px;
+                height: 100px;
+                position: relative;
+                left: 50%;
+                transform: translateX(-50%);
+                margin-bottom: 40px;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+           p {
+               font-size: 16px;
+               color: #1f464a;
+               text-align: center;
+           }
+
+
+            
+        }
+    }
+}
+
+

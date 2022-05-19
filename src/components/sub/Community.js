@@ -12,6 +12,9 @@ function Community() {
   const textarea = useRef(null);
   const editInput = useRef(null);
   const editTextarea = useRef(null);
+  const frame = useRef(null);
+  const cursor = useRef(null);
+  let isCursor = false;
 
   const getLocalData = () => {
     const data = localStorage.getItem('post');
@@ -117,10 +120,32 @@ function Community() {
     )
   }
 
+  const mouseMove = (e) => {
+    if(isCursor) {
+      cursor.current.style.left = e.clientX + 'px';
+      cursor.current.style.top = e.clientY + 'px';
+    }
+  }
+
 
   useEffect(()=>{
-   
+    localStorage.setItem('post',JSON.stringify(posts));
   },[posts])
+
+  useEffect (() => {
+    frame.current.addEventListener('mouseenter',()=> {
+      isCursor=true;
+      cursor.current.style.display = 'block'; 
+    })
+    frame.current.addEventListener('mouseleave',()=>{
+      isCursor=false;
+      cursor.current.style.dispaly = 'none';
+    })
+
+    window.addEventListener('mousemove',mouseMove);
+
+    return()=>window.removeEventListener('mousemove', mouseMove)
+  })
 
   return (
     <>
@@ -128,7 +153,7 @@ function Community() {
         <p>description</p>
       </Layout>
 
-      <section className='insta'>
+      <section className='insta' ref={frame}>
       <div className="inner">
         <h2>Your belongings deserve great homes</h2>
         <p>Share your space: #CreateSpacetoEnjoy</p>
@@ -142,7 +167,21 @@ function Community() {
         navigation={true}
         modules={[Navigation]}
         slidesPerView={7}>
-        <SwiperSlide>
+          {[0,1,2,3,4,5,6,7,8,9].map((num)=>{
+            return(
+              <SwiperSlide
+                key={num}
+                onMouseEnter={()=>{
+                  cursor.current.style = 'transform : scale(4)';
+                }}
+                onMouseLeave={()=>{ 
+                  cursor.current.style = 'transform : scale(1)';
+                }}>
+                  <img src={`${path}/assets/insta${num+1}.jpg`}/>
+              </SwiperSlide>
+            )
+          })}
+        {/* <SwiperSlide>
           <img src={`${path}/assets/insta1.jpg`} alt="" />
         </SwiperSlide>
         <SwiperSlide>
@@ -171,8 +210,10 @@ function Community() {
         </SwiperSlide>
         <SwiperSlide>
           <img src={`${path}/assets/insta10.jpg`} alt="" />
-        </SwiperSlide>
-      </Swiper>
+        </SwiperSlide>*/}
+      </Swiper> 
+
+      <div className="cursor" ref={cursor}></div>
 
       <span><a href="#">Follow us @getoepnspaces</a></span>
       </section>

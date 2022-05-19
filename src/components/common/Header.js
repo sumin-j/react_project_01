@@ -2,11 +2,22 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleUser } from '@fortawesome/free-solid-svg-icons';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
+import Menu from './Menu';
+import {useState, useRef, useEffect} from 'react';
+
 
 function Header(props) {
-    const active = {background:'#1f464a', borderRadius:'16px', color:'#fff'}
+    const menu = useRef(null);
+    const active = {background:'#1f464a', borderRadius:'16px', color:'#fff'};
+    const [toggle, setToggle] = useState(false);
+
+    useEffect(()=> {
+        toggle ? menu.current.open() : menu.current.close();
+    },[toggle])
   return (
-    <header className={props.type}>
+    <>
+        <header className={props.type}>
         <div className="inner">
             <h1>
                 <NavLink exact to='/'>Open spaces</NavLink>
@@ -33,12 +44,22 @@ function Header(props) {
                 </li>
             </ul>
 
+            <div className="util">
             <a href="#" className='myPage'>
                 <FontAwesomeIcon icon={faCircleUser} />    
             </a>
 
+            <a className='menuMo'>
+                <FontAwesomeIcon icon={faBars} onClick={()=> setToggle(!toggle)}></FontAwesomeIcon>
+            </a>
+            </div>
+
         </div>
     </header>
+
+            <Menu ref={menu} toggle={toggle} setToggle={setToggle}/>
+
+    </>
   )
 }
 

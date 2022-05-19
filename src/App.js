@@ -56,22 +56,24 @@ function App() {
 		})
 	}
 
-	// const fectchFlickr = async () => {
-	// 	const key = 'ca24b6512eb290da467d30145c248418';
-    // 	const method_interest = 'flickr.interestingness.getList';
-    // 	const num = 30;
-    // 	const url = `https://www.flickr.com/services/rest/?method=${method_interest}&per_page=${num}&api_key=${key}&nojsoncallback=1&format=json`;
+	const fetchFlickr = async() => {
+		const key = 'ca24b6512eb290da467d30145c248418';
+		const method_user = 'flickr.people.getPhotos';
+		const num = 3;
+		const user = '195483360@N06';
+		const url = `https://www.flickr.com/services/rest/?method=${method_user}&per_page=${num}&api_key=${key}&nojsoncallback=1&format=json&user_id=${user}`;
+		await axios.get(url).then((json) => {
+			dispatch(setFlickr(json.data.photos.photo));
+		});
+	}
 
-    // 	await axios.get(url).then((json)=>{
-    //   	dispatch(setFlickr(json.data.photos.photo));
-    // });
-	// }
+	
 
 	// 해당 루트 컴포넌트가 마운트 되면 store에 데이터 저장
 	useEffect(()=> {
 		fetchYoutube();
 		fetchMembers();
-		
+		fetchFlickr();
 	},[])
 
 
@@ -90,7 +92,7 @@ function App() {
 			<Route exact path='/' component={Main}/>
 				{/* <Route path='/' component={()=> <Header type={'sub'}/>}/> */}
 
-				<Route path='/' render={()=> <Header type={'sub'}/>}/> 
+			<Route path='/' render={()=> <Header type={'sub'}/>}/> 
 		</Switch>
 
 		<Route path='/department' component={Department}/>

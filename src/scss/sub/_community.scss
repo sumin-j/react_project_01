@@ -133,3 +133,18 @@
 
     
 }
+
+.cursor {
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    position: fixed;
+    border-radius: 50%;
+    top: -20px;
+    left: -20px;
+    z-index: 5;
+    mix-blend-mode: difference;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    transition: transform 0.5s;
+}
