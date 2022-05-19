@@ -93,7 +93,9 @@
 			}
 	
 			.content {
+				padding: 20px;
 				margin-bottom: 24px;
+				background: #efefef;
 				&::after {
 					content: '';
 					display: block;

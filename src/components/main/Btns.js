@@ -1,5 +1,6 @@
 function Btns(props) {
 	const arr = Array.from(Array(props.num).keys());
+	let num = 0
 
 	return (
 		<ul className='scroll_navi'>
@@ -11,7 +12,11 @@ function Btns(props) {
 					<li
 						key={idx}
 						className={active}
-						onClick={() => props.setIndex(idx)}></li>
+						onClick={() => props.setIndex(idx)}>
+
+					</li>
+					
+						
 				);
 			})}
 		</ul>

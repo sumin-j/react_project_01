@@ -74,6 +74,8 @@ function Gallery() {
     }
   }
 
+  
+
   useEffect(()=> {
     // getFlickr({
 		// 	type: 'interest',
@@ -82,17 +84,19 @@ function Gallery() {
 
     getFlickr({
       type: 'user',
-      count:100,
+      count:25,
       user: '195483360@N06',
 
     })
   },[])
 
+  
+
 
   return (
     <>
-      <Layout name={'Gallery'}>
-        <p>description</p>
+      <Layout name={'Gallery'} img={`gallery.jpg`}>
+        <p>Rest easy—we have all the essentials you need<br/> to enjoy a calm, clutter-free home.</p>
       </Layout>
 
       {loading ? (
@@ -115,7 +119,7 @@ function Gallery() {
       </button>
 
       <div className="searchBox">
-        <input type="text" 
+        <input type="text"  placeholder='Keyword'
         ref={input}
         onKeyUp={(e)=>{
           if(e.key === 'Enter') showSearch();
@@ -125,13 +129,41 @@ function Gallery() {
       </div>
 
       <div className="frame" ref={frame}>
+        <div className="box">
+          <strong>Open spaces</strong>
+          <span> 1990</span>
+          <h3>#1</h3>
+        </div>
+        <div className="box">
+          <strong>Open spaces</strong>
+          <span> 1992</span>
+          <h3>#2</h3>
+        </div>
+        <div className="box">
+          <strong>Open spaces</strong>
+          <span> 1994</span>
+          <h3>#3</h3>
+        </div>
+        <div className="box">
+          <strong>Open spaces</strong>
+          <span> 1996</span>
+          <h3>#4</h3>
+        </div>
+        <div className="box">
+          <strong>Open spaces</strong>
+          <span> 2002</span>
+          <h3>#5</h3>
+        </div>
+
+
         <Masonry elementType={'div'} options={masonryOptions}>
         {items.map((item,idx)=> {
           return(
+            
             <article key={idx}
             onClick={()=>{ 
-              setIndex(idx);
               pop.current.open();
+              setIndex(idx);
             }}>
               <div className="inner">
                 <div className="pic">
@@ -148,7 +180,20 @@ function Gallery() {
       </div>
       </div>
 
-      
+      <Popup ref={pop}>
+				{items.length !== 0 ? (
+					<>
+					
+            <img
+							src={`https://live.staticflickr.com/${items[index].server}/${items[index].id}_${items[index].secret}_b.jpg`}
+						/>
+						<span className='close' onClick={() => pop.current.close()}>
+							close
+						</span>
+            
+					</>
+				) : null}
+			</Popup>
     </>
 
 

@@ -23,8 +23,10 @@ function Department() {
   return (
     
       <>
-      <Layout name={'Department'}>
-        <p>description</p>
+      <Layout name={'Department'} img={`department.jpg`}>
+        <p>After a long day of urgent emails, meetings, 
+and calls,<br/> we do everything we can to slow 
+down and focus on the important things</p>
       </Layout>
 
 

@@ -4,6 +4,7 @@ import axios from 'axios';
 import Popup from '../common/Popup';
 import { useSelector, useDispatch } from 'react-redux';
 import {setYoutube} from '../../redux/action';
+const path = process.env.PUBLIC_URL;
 
 function Youtube() {
   // const [vids,setVids] = useState([]);
@@ -27,15 +28,41 @@ function Youtube() {
   const pop = useRef(null);
 
   const [index,setIndex] = useState(0);
+  const frame = useRef(null);
+  const cursor = useRef(null);
+  let isCursor = false;
+
+
+  const mouseMove = (e) => {
+    if(isCursor) {
+      cursor.current.style.left = e.clientX + 'px';
+      cursor.current.style.top = e.clientY + 'px';
+    }
+  }
+
+  useEffect (() => {
+    frame.current.addEventListener('mouseenter',()=> {
+      isCursor=true;
+      cursor.current.style.display = 'block'; 
+    })
+    frame.current.addEventListener('mouseleave',()=>{
+      isCursor=false;
+      cursor.current.style.dispaly = 'none';
+    })
+
+    window.addEventListener('mousemove',mouseMove);
+
+    return()=>window.removeEventListener('mousemove', mouseMove)
+  },[])
 
   return (
     
     <>
-      <Layout name={'Youtube'}>
-      <p>description</p>
+      <Layout name={'Youtube'} img={`youtube.jpg`}>
+      <p>"An instant sense of calm and relief." </p>
       </Layout>
 
-      <section className='youtube'>
+      <section className='youtube'  ref={frame}>
         {vidData.map((vid,idx)=>{
           const tit = vid.snippet.title;
           const desc = vid.snippet.description;
@@ -47,8 +74,15 @@ function Youtube() {
               pop.current.open();
               setIndex(idx);
             }}>
-              <div className="pic">
-                <img src={vid.snippet.thumbnails.standard.url}/>
+              <div className="pic" 	
+              onMouseEnter={() => {
+								cursor.current.style = 'transform: scale(2)';
+							}}
+							onMouseLeave={() => {
+								cursor.current.style = 'transform: scale(1)';
+							}}>
+                <img src={vid.snippet.thumbnails.standard.url}  />
+
               </div>
               <div className="con">
                 <h2>{tit.length > 50 ? tit.substr(0,50)+'...' : tit}</h2>
@@ -57,8 +91,13 @@ function Youtube() {
               </div>
             </article>
           );
+
         })}
+        <div className="cursor" ref={cursor}>view</div>
+
       </section>
+
+
 
         {/* {open ? <Popup setOpen={setOpen}>
 				<iframe src={`https://www.youtube.com/embed/${vids[index].snippet.resourceId.videoId}`} frameBorder="0"></iframe>

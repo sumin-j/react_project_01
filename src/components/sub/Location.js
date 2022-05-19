@@ -98,8 +98,9 @@ function Location() {
 
   return (
     <>
-      <Layout name={'Location'}>
-        <p>description</p>
+      <Layout name={'Location'} img={`location.jpg`}>
+        <p>It’s the beginning of a journey that we’re excited for you to join.<br/> Please take a look through our current openings below.
+ </p>
       </Layout>
 
       <section className="map">

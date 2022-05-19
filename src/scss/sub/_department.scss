@@ -19,98 +19,9 @@
     }
 }
 
-
-// .memberList {
-//     width: 100%;
-//     height: auto;
-
-    
-//     li {
-//         padding: 10px;
-//         &:nth-of-type(1) {
-//             background: #f1dc83;
-//         }
-//         &:nth-of-type(2) {
-//             background: #c1d0cd;
-//         }
-//         &:nth-of-type(3) {
-//             background: #e2daf0;
-//         }
-//         &:nth-of-type(4) {
-//             background: #f2a474;
-//         }
-//         &:nth-of-type(5) {
-//             background: #f1dc83;
-//         }
-//         &:nth-of-type(6) {
-//             background: #c1d0cd;
-//         }
-        
-//         &::after {
-//             content: '';
-//             display: block;
-//             clear: both;
-//         }
-//         .inner {
-//             width: 1180px;
-//             margin: 0 auto;
-//             height: auto;
-//             padding: 20px 160px;
-//             position: relative;
-//             &::after {
-//                 content: '';
-//                 display: block;
-//                 clear: both;
-//             }
-//             .pic {
-//                 width: 250px;
-//                 float: left;
-//                 img {
-//                     width: 100%;
-//                     border-radius: 8px;
-//                     object-fit: cover;
-//                 }
-//             }
-//             .con {
-//                 float: right;
-//                 position: absolute;
-//                 top: 140px;
-//                 left: 600px;
-//                 text-align: center;
-//                 span {
-//                     display: block;
-//                     font-size: 16px;
-//                     color: #1f464a;
-//                     margin-bottom: 8px;
-//                 }
-//                 h1 {
-//                     font-size :32px;
-//                     color: #1f464a;
-//                     margin-bottom: 12px;
-//                 }
-//                 p {
-//                     font-size: 20px;
-//                     color: #1f464a;
-//                     margin-bottom: 28px;
-//                 }
-//             }
-//             .sns {
-//                 svg {
-//                     font-size: 18px;
-//                     margin-right:8px;
-//                     color: #1f464a;
-//                     cursor: pointer;
-//                 }
-//             }
-//         }
-//     }
-    
-// }
-
-
     .member {
         width: 1180px;
-        height: 1000px;
+        height: 1200px;
         padding: 120px 0;
         margin: 0 auto;
         
@@ -124,12 +35,26 @@
             border-radius: 4px;
             position: relative;
             &:nth-of-type(3),
-            &:nth-of-type(6) {
+            &:nth-of-type(6),
+            &:nth-of-type(9) {
                 margin-right: 0;
+            }
+            &:hover {
+                border: 1px solid #1f464a;
+                .sns {
+                    svg {
+                        color: #fff;
+                        background :#1f464a;
+                        border-radius: 12px;
+                        padding: 8px;
+                    }
+                }
+
             }
             
             .inner {
                 padding: 20px;
+
                 .pic {
                     width: 150px;
                     height: 150px;
@@ -148,6 +73,7 @@
                         border-radius: 50%;
                         box-shadow: 5px 5px 20px rgba(0,0,0,0.3);
                         
+
                     }
                 }
                 .con {
@@ -181,7 +107,7 @@
                         clear: both;
                     }
                     svg {
-                        color: #1f464a;
+                        // color: #1f464a;
                         margin-right: 10px;
                         cursor: pointer;
                     }

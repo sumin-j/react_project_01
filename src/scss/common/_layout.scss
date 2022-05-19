@@ -4,6 +4,14 @@
         width: 100%;
         height: 300px;
         background: #efefef;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
    }
 
     >.inner {
@@ -21,7 +29,9 @@
         
         h1 {
             font-weight: 700;
-            font-size: 38px;
+            font-size: 40px;
+            color: transparent;
+            -webkit-text-stroke: 2px #f1a574;
             margin-bottom: 40px;
             &::after {
                 content: '';
@@ -31,12 +41,13 @@
                 left: 570px;
                 width: 40px;
                 height: 2px;
-                background: #000;
+                background: #f1a574;
             }
         }
 
         p {
             font-size: 18px;
+            color: #f1a574;
         }
     }
 

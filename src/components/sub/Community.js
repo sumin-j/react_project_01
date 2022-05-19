@@ -149,8 +149,8 @@ function Community() {
 
   return (
     <>
-      <Layout name={'Community'}>
-        <p>description</p>
+      <Layout name={'Community'} img={`community.jpg`}>
+        <p>We created Give One as an extension of the Pattern family<br/>to help communities around the country better enjoy daily life.</p>
       </Layout>
 
       <section className='insta' ref={frame}>

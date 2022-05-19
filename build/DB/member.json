@@ -3,38 +3,38 @@
         {
             "name" : "Christoper",
             "position" : "CEO",
-            "pic" : "member1.jpg",
+            "pic" : "member1.jpeg",
             "num" : "01"
         },
         {
             "name" : "Charth",
             "position" : "Vice President",
-            "pic" : "member2.jpg",
+            "pic" : "member2.jpeg",
             "num" : "02"
 
         },
         {
             "name" : "David",
             "position" : "Director",
-            "pic" : "member3.jpg",
+            "pic" : "member3.jpeg",
             "num" : "03"
         },
         {
             "name" : "Laura",
             "position" : "Team manager",
-            "pic" : "member4.jpg",
+            "pic" : "member4.jpeg",
             "num" : "04"
         },
         {
             "name" : "Catherine",
             "position" : "Staff",
-            "pic" : "member5.jpg",
+            "pic" : "member5.jpeg",
             "num" : "05"
         },
         {
             "name" : "Grace",
             "position" : "Staff",
-            "pic" : "member6.jpg",
+            "pic" : "member6.jpeg",
             "num" : "06"
         }
     ]

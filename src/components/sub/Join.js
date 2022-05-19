@@ -90,8 +90,8 @@ function Join() {
 
   return (
    <>
-    <Layout name={'Join'}>
-     <p>description</p>
+    <Layout name={'Join'} img={`join.jpg`}>
+     <p>We're excited to offer professional organizers and interior designers exclusive trade pricing on all full-price merchandise<br/> with no minimum purchase.</p>
     </Layout>
     
     <form action="#" onSubmit={handleSubmit}>
