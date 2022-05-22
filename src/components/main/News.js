@@ -87,8 +87,10 @@ function News() {
           <FontAwesomeIcon icon={faStar} /> 
           </div>       
 
-          <strong>Perfect rack for small spaces</strong>
-          <p>I needed a way to keep all of my different activity shoes neatly tucked away but also nearby! This rack proviede the perfect solution.</p>
+          <div className="text">
+            <strong>Perfect rack for small spaces</strong>
+            <p>I needed a way to keep all of my different activity shoes neatly tucked away but also nearby! This rack proviede the perfect solution.</p>
+          </div>
         </div>
 
         <div className="content">
@@ -107,8 +109,10 @@ function News() {
           <FontAwesomeIcon icon={faStar} /> 
           </div>       
 
-          <strong>Amazing~~~~~~!!!</strong>
-          <p>These under-bed storages are simply amazing and way larger than I expected. Let me be honest, I never look at dimensions when buying things and maybe should have with these. I used them to help me move initially and was able to fit so much in them!</p>
+          <div className="text">
+            <strong>Amazing~~~~~~!!!</strong>
+            <p>These under-bed storages are simply amazing and way larger than I expected. Let me be honest, I never look at dimensions when buying things and maybe should have with these. I used them to help me move initially and was able to fit so much in them!</p>
+          </div>
         </div>
 
         <div className="content">
@@ -127,9 +131,11 @@ function News() {
           <FontAwesomeIcon icon={faStarHalf} /> 
           </div>       
 
-          <strong>I store my pumping supplies</strong>
-          <p>I store my pumping supplies and daughter’s little bobbles/toys in these sturdy beauties.
+          <div className="text">
+            <strong>I store my pumping supplies</strong>
+            <p>I store my pumping supplies and daughter’s little bobbles/toys in these sturdy beauties.
 </p>
+          </div>
         </div>
       </section>
       </div>

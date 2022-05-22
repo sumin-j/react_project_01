@@ -36,6 +36,24 @@
             "position" : "Staff",
             "pic" : "member6.jpeg",
             "num" : "06"
+        },
+        {
+            "name" : "Julie",
+            "position" : "Staff",
+            "pic" : "member7.jpeg",
+            "num" : "07"
+        },
+        {
+            "name" : "Tom",
+            "position" : "Staff",
+            "pic" : "member8.jpeg",
+            "num" : "08"
+        },
+        {
+            "name" : "Jessie",
+            "position" : "Staff",
+            "pic" : "member9.jpeg",
+            "num" : "09"
         }
     ]
 }

@@ -28,26 +28,33 @@
         transition: 0.5s;
         
         h1 {
+            text-align: left;
+            position: absolute;
+            left: 70px;
             font-weight: 700;
             font-size: 40px;
             color: transparent;
-            -webkit-text-stroke: 2px #f1a574;
+            -webkit-text-stroke: 2px #A6394F;
             margin-bottom: 40px;
             &::after {
                 content: '';
                 display: block;
                 position: absolute;
-                top: 50px;
-                left: 570px;
+                top: 55px;
+                left: 0;
                 width: 40px;
                 height: 2px;
-                background: #f1a574;
+                background: #A6394F;
             }
         }
 
         p {
+            text-align: left;
             font-size: 18px;
-            color: #f1a574;
+            color: #A6394F;
+            position: absolute;
+            left: 70px;
+            top: 80px;
         }
     }
 
@@ -59,3 +66,4 @@
     }
     
 }
+

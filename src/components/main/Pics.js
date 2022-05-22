@@ -42,7 +42,7 @@ function Pics(props) {
 								}}
 								style={
 									position >= 0 
-									?  { transform: `translateY(${position / -1.2}px)` }
+									?  { transform: `translateY(${position / -1}px)` }
 									: null
 								}
 								>

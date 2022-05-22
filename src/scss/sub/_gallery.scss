@@ -18,14 +18,14 @@
     .interest_button {
         float: left;
         position: absolute;
-        top: 45px;
-        left: 75%;
+        top:50px;
+        left: 68%;
         transform: translateX(-50%);
         width: 120px;
-        height: 40px;
+        height: 30px;
         background: #fff;
         border: 2px solid #1f464a;
-        border-radius: 40px;
+        border-radius: 4px;
         padding: 6px;
         margin-bottom: 20px;
         font-size: 14px;
@@ -36,7 +36,7 @@
     .searchBox {
         float: right;
         position: relative;
-        right: 0;
+        right: 100px;
         top: 10px;
         input[type=text] {
             width: 130px;
@@ -50,9 +50,9 @@
 
         button {
             border: none;
-            border-radius: 20px;
+            border-radius: 4px;
             background: #1f464a;
-            font-size: 14px;
+            font-size: 12px;
             color: #fff;
             padding: 6px;
         }

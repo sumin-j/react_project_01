@@ -81,7 +81,7 @@ function Youtube() {
 							onMouseLeave={() => {
 								cursor.current.style = 'transform: scale(1)';
 							}}>
-                <img src={vid.snippet.thumbnails.standard.url}  />
+								<img src={vid.snippet.thumbnails.high.url} />
 
               </div>
               <div className="con">
