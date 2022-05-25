@@ -220,6 +220,9 @@ function Community() {
 
       <section className="faq">
         <div className="inputBox">
+          <h3>Have questions about your Free Move ?</h3>
+          <span>CONTACT US ANYTIME</span>
+          <a href="mailto:help@getopenspaces.com">help@getopenspaces.com</a>
           <input type="text" placeholder='Please enter a title.' ref={input}/><br/>
           <textarea  cols="30" rows="10" placeholder='Please enter a content' ref={textarea}></textarea><br/>
 

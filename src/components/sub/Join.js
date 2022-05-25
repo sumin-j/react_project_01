@@ -88,6 +88,11 @@ function Join() {
     setErr(check(val));
   };
 
+  useEffect(()=> {
+
+  },[err]);
+
+  
   return (
    <>
     <Layout name={'Join'} img={`join.jpg`}>
@@ -153,8 +158,9 @@ function Join() {
                   <option value="spanish">Spanish</option>
                   <option value="chinese">Chinese</option>
                   <option value="japanese">Japanese</option>
-                  <span className="err">{err.language}</span>
                 </select>
+                <span className="err">{err.language}</span>
+
               </td>
             </tr>
             {/* Known path */}

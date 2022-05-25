@@ -57,32 +57,77 @@
 
 .faq {
     width: 1180px;
-    height: 1200px;
+    min-height: 1000px;
     max-height: 3000px;
     margin: 0 auto;
     padding: 80px 0;
     position: relative;
+    &::after {
+        content: '';
+        display: block;
+        clear: both;
+    }
 
     .inputBox {
+        width: 550px;
+        height: 600px;
+        float: left;
         position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 20px;
+        border-radius: 4px;
+        background: #efefef;
+        box-shadow: 10px 10px 20px #b8b4b4;
+        h3 {
+            font-size: 28px;
+            color: #1f464a;
+            margin-bottom: 28px;
+            &::after {
+                content: '';
+                display: block;
+                width: 60px;
+                height: 2px;
+                position: absolute;
+                top: 60px;
+                background: #1f464a;
+            }
+        }
+        span {
+            display: block;
+            font-size: 16px;
+            color: #aaa;
+            margin-bottom: 4px;
+        }
+        a {
+            display: block;
+            font-size: 18px;
+            margin-bottom: 60px;
+        }
         input[type=text]{
             width: 300px;
             height: 30px;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
             padding: 10px;
             margin-bottom: 20px;
         }
         textarea {
             width: 300px;
+            height: 260px;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
             resize: none;
             padding: 10px;
             margin-bottom: 10px;
         }
         button {
-            margin-right: 20px;
-            margin-left: 50px;
+            position: relative;
+            top: 20px;
+            left: 30%;
+            margin-right: 40px;
             border: none;
             border-radius: 20px;
             background: #1f464a;
@@ -93,41 +138,59 @@
     }
 
     .showBox {
-        width: 100%;
-        position: absolute;
-        top: 420px;
-        input[type=text]{
-            width: 300px;
-            height: 30px;
-            padding: 10px;
-            margin-bottom: 20px;
-        }
-        textarea {
-            width: 300px;
-            resize: none;
-            padding: 10px;
-            margin-bottom: 10px;
-        }
-        h2 {
-            font-size: 26px;
-            color: #1f464a;
-            margin-bottom: 8px;
-        }
-        p {
-            font-size: 18px;
-            line-height: 1.2;
-            color: #1f464a;
-            margin-bottom: 8px;
-        }
-        button {
-            margin-right: 12px;
-            margin-bottom: 12px;
-            border: none;
-            border-radius: 20px;
-            background: #1f464a;
-            color: #fff;
-            font-size: 14px;
-            padding: 6px;
+        float: right;
+        width: 600px;
+        article {
+            position: relative;
+            border-radius: 4px;
+            background: #efefef;
+            box-shadow: 8px 8px 8px #d2cfcf;
+            padding: 12px;
+            margin-bottom: 30px;
+            input[type=text]{
+                width: 300px;
+                height: 30px;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                padding: 10px;
+                margin-bottom: 20px;
+            }
+            textarea {
+                width: 300px;
+                position: relative;
+                top: 20px;
+                left: 50%;
+                transform: translateX(-50%);
+                resize: none;
+                padding: 10px;
+                margin-bottom: 10px;
+            }
+            h2 {
+                font-size: 26px;
+                color: #1f464a;
+                margin-bottom: 8px;
+            }
+            p {
+                font-size: 18px;
+                line-height: 1.2;
+                color: #1f464a;
+                margin-bottom: 12px;
+            }
+            .btns {
+                position: absolute;
+                right: 0;
+                top:14px;
+                button {
+                    margin-right: 12px;
+                    border: none;
+                    border-radius: 20px;
+                    background: #1f464a;
+                    color: #fff;
+                    font-size: 14px;
+                    padding: 6px;
+                }
+            }
         }
     }
 

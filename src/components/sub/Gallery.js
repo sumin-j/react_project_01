@@ -100,7 +100,7 @@ function Gallery() {
       </Layout>
 
       {loading ? (
-					<img className='loading' src={path + '/assets/loading.gif'} />
+					<img className='loading' src={path + '/assets/loading2.gif'} />
 				) : null}
       <div className="wrap">
       <button className='interest_button' onClick={()=>{
