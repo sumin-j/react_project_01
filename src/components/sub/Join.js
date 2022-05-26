@@ -100,6 +100,8 @@ function Join() {
     </Layout>
     
     <form action="#" onSubmit={handleSubmit}>
+      <h3>Welcome to Open spaces </h3>
+      <p>Register your account</p>
       <fieldset>
         <legend className='hidden'>Join form</legend>
         <table>
@@ -200,12 +202,12 @@ function Join() {
       </fieldset>
 
       <div className="wrap">
-        <div className="pic1">
-        <img src={`${path}/assets/join1.jpg`} alt="" />      
+        <div className="pic">
+        <img src={`${path}/assets/join1.jpg`} alt="" className='join1' />
+        <img src={`${path}/assets/join2.jpg`} alt="" className='join2' />      
         </div>
-        <div className='pic2'>
-        <img src={`${path}/assets/join2.jpg`} alt="" />
-        </div>
+        {/* <div className='pic2'>
+        </div> */}
       </div>
     </form>
 

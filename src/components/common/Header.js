@@ -39,14 +39,17 @@ function Header(props) {
                 <li>
                     <NavLink activeStyle={active} to='/location'>Location</NavLink>
                 </li>
-                <li>
+                {/* <li>
                     <NavLink activeStyle={active} to='/join'>Join</NavLink>
-                </li>
+                </li> */}
             </ul>
 
             <div className="util">
             <a href="#" className='myPage'>
-                <FontAwesomeIcon icon={faCircleUser} />    
+                <NavLink to='/join'>
+                    <FontAwesomeIcon icon={faCircleUser} />  
+                </NavLink>
+  
             </a>
 
             <a className='menuMo'>

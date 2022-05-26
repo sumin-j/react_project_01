@@ -8,9 +8,15 @@ footer {
         padding: 80px 0;
         display: flex;
         flex-direction: column;
-        text-align: center;
+        
 
-        >span {
+        h4 {
+            font-size: 24px;
+            margin-bottom: 80px;
+            text-align: left;
+        }
+
+        span {
             font-size: 16px;
             color: #443B35;
             margin-bottom: 30px;
@@ -18,20 +24,41 @@ footer {
                 border-bottom: 1px dotted #000;
             }
         }
-        .btnStart {
-            display: block;
-            width: 200px;
-            height: 200px;
-            padding: 16px 0;
-            transform: translateX(450px);
-            background: #fff;
-            border: 2px solid #CCC5C3;
-            border-radius: 16px;
-            margin-bottom: 30px;
-            &:hover {
-                background: #efefef;
+        
+       .footer {
+           position: relative;
+           &::after {
+               content: '';
+               display: block;
+               clear: both;
+           }
+        .sns {
+            float: left;
+            position: absolute;
+            top: -140px;
+            left: 70%;
+            li {
+                padding: 10px;
+                border-bottom: 1px solid #888;
+                &:hover {
+                    border-bottom: 1px solid #000;
+                }
             }
         }
+        .pages {
+            float: right;
+            position: absolute;
+            top: -140px;
+            left: 90%;
+            li {
+                padding: 10px;
+                border-bottom: 1px solid #888;
+                &:hover {
+                    border-bottom: 1px solid #000;
+                }
+            }
+        }
+       }
     }
 }
 
