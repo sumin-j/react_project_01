@@ -47,21 +47,24 @@ header {
         }
 
         .util {
-            position: relative;
-            padding: 20px;
-            top: 10px;
-            right: -500px;
-            .myPage {
-                font-size: 28px;
-                color: #000;
-                position: absolute;
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            &::after {
+                content: '';
+                display: block;
+                clear: both;
             }
-    
-            .menuMo {
-                position: absolute;
+            .myPage {
+                float: left;
                 font-size: 24px;
-                color: #1f464a;
+                margin-right: 30px;
+            }
+            .menuMo {
+                float: left;
+                font-size: 24px;
                 display: none;
+                cursor: pointer;
             }
         }
     }
@@ -92,9 +95,8 @@ header {
 
             .util {
                 .myPage {
-                    right: 80px;
+                    display: none;
                 }
-    
                 .menuMo {
                     display: block;
                 }
@@ -102,3 +104,8 @@ header {
         }
     }
 }
+
+
+
+
+

@@ -1,4 +1,5 @@
 .banner {
+    overflow: hidden;
     width: 100%;
     height: 400px;
     background: #fef9f3;
@@ -20,6 +21,7 @@
 }
 
     .member {
+        overflow: hidden;
         width: 1180px;
         height: 1200px;
         padding: 120px 0;
@@ -116,6 +118,145 @@
         }
     }
 
-   
+@media screen and (max-width: $tablet) {
+    .banner {
+        height: 300px;
+        .inner {
+            width: 100%;
+            padding: 80px 20px;
+            
+            p {
+                width: 100%;
+            }
+        }
+    }
+    
+        .member {
+            overflow: hidden;
+            width: 100%;
+            height: auto;
+            padding: 120px 60px;
+            
+            li {
+                width: 30%;
+                height: 280px;
+                margin-right: 20px;
+                margin-bottom: 80px;
+                background: #efefef;
+                border-radius: 4px;
+                position: relative;
+                &:nth-of-type(3),
+                &:nth-of-type(6),
+                &:nth-of-type(9) {
+                    margin-right: 0;
+                }
+                &:hover {
+                    border: 1px solid #1f464a;
+                    .sns {
+                        svg {
+                            color: #fff;
+                            background :#1f464a;
+                            border-radius: 12px;
+                            padding: 8px;
+                        }
+                    }
+    
+                }
+                
+                .inner {
+                    padding: 20px;
+    
+                    .pic {
+                        width: 150px;
+                        height: 150px;
+                        left: 50%;
+                        top: -20%;
+                        border-radius: 50%;
+                        padding: 10px;
+                        background: #efefef;
+                        position: absolute;
+                        transform: translateX(-50%);
+        
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            border-radius: 50%;
+                            box-shadow: 5px 5px 20px rgba(0,0,0,0.3);
+                            
+    
+                        }
+                    }
+                    .con {
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        transform: translate(-50%,-50%);
+                        text-align: center;
+                        span {
+                            display: block;
+                            font-size: 16px;
+                            color: #1f464a;
+                            margin-bottom: 12px;
+                            margin-top: 80px;
+                        }
+                        h1 {
+                            font-size: 24px;
+                            // color: #1f464a;
+                            margin-bottom: 8px;
+                        }
+                        p {
+                            font-size: 16px;
+                            color: #1f464a;
+                            margin-bottom: 20px;
+                        }
+                    }
+                    .sns {
+                        &::after {
+                            content: '';
+                            display: block;
+                            clear: both;
+                        }
+                        svg {
+                            // color: #1f464a;
+                            margin-right: 10px;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+}
+@media screen and (max-width: $mp) {
+    .banner {
+        .inner {
+            padding: 60px 20px;
+            }
+    }
+    
+        .member {
+            
+            li {
+                width: 100%;
+                height: 240px;
+                .inner{
+                    .con {
+                        span {
+                            margin-top: 100px;
+                        }
+                    }
+                    .sns {
+                        svg {
+                            margin-bottom: 8px;
+                            margin-right: 10px;
+                            cursor: pointer;
+                        }
+                    }
+                }        
+                    }
+                    
+                }
 
-
+                
+            }
+       
