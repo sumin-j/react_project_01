@@ -50,7 +50,7 @@ form {
                         background: #1f464a;
                         color: #fff;  
                         border: none;   
-                        border-radius: 20px;  
+                        border-radius: 4px;  
                         cursor: pointer;        
                     }
                     input[type=submit]{
@@ -61,7 +61,7 @@ form {
                         background: #1f464a;
                         color: #fff;  
                         border: none;   
-                        border-radius: 20px; 
+                        border-radius: 4px; 
                         cursor: pointer; 
                     }
                 }
@@ -71,6 +71,7 @@ form {
                     input[type=password],
                     input[type=email],
                     select {
+                        width: 250px;
                         height: 40px;
                         padding: 10px;
                         background: #efefef;

@@ -77,4 +77,58 @@
     }
 }
 
+@media screen and (max-width: $tablet) {
+    .youtube {
+        article {
+            &:nth-of-type(2n) {
+                .con {
+                    float: left;
+                    width: 40%;
+                    top: 120px;
+                    left: 6%;
+                }
+            }
+            .pic {
+                float: left;
+                width: 50%;
+                height: 350px;
+                background: #fef9f3;        
+                cursor: pointer;
+    
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+                
+                
+            }
+            
+    
+            .con {
+                width: 40%;
+                top: 120px;
+            }
+        }
+    }
+}
 
+@media screen and (max-width: $mp) {
+    .youtube {
+        article {
+            &:nth-of-type(2n) {
+                .con {
+                    float: left;
+                    width: 40%;
+                    top: 80px;
+                    left: 6%;
+                }
+            }
+            
+    
+            .con {
+                top: 80px;
+            }
+        }
+    }
+}

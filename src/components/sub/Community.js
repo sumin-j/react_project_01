@@ -166,7 +166,15 @@ function Community() {
         loop={true}
         navigation={true}
         modules={[Navigation]}
-        slidesPerView={7}>
+        breakpoints={{
+          1179 : {
+            slidesPerView : 7
+          },
+          639 : {
+            slidesPerView: 5
+          }
+        }}
+       >
           {[0,1,2,3,4,5,6,7,8,9].map((num)=>{
             return(
               <SwiperSlide

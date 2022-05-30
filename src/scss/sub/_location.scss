@@ -175,4 +175,119 @@
     }
 }
 
+@media screen and (max-width : $tablet) {
+    .map {
+        width: 100%;
+        margin: 0 40px;
+    
+        &::after {
+            left: 45%;
+        }
+        #map {
+            width: 50%;
+            
+        }
+        
+        ul {
+            left: 270px;
+        }
+    
+        .contact {
+            width: 50%;
+            h2 {
+                &::after {
+                    left: 200px;
+                }
+            }
+            form {
+                padding: 0 80px;
+                label {
+                    display: block;
+                    font-size: 18px;
+                    color: #1f464a;
+                    padding: 8px;
+                }
+                input[type=text],[type=email] {
+                    width: 180px;
+                    height: 30px;
+                    border: none;
+                    background: #efefef;
+                    padding-left: 10px;
+                    margin: 4px;
+                    &:nth-of-type(3) {
+                        width: 300px;
+                        height: 75px;
+                    }
+                }
+                input[type=submit] {
+                    position: absolute;
+                    width: 200px;
+                    height: 25px;
+                    left: 100px;
+                    background: #1f464a;
+                    font-size: 16px;
+                    color: #fff;
+                    border: none;
+                    border-radius: 4px;
+                    padding: 0 20px;
+                    margin-top: 26px;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+    
+    .ad {
+        padding: 60px;
+        background: #efebe6;
+        
+        h2 {
+            font-size: 28px;
+            font-weight: 700;
+            text-align: center;
+            color: #1f464a;
+        }
+    
+        .wrap {
+            width: 100%;
+            margin: 0 auto;
+            &::after {
+                content: '';
+                display: block;
+                clear: both;
+            }
+            .inner {
+                float: left;
+                width: 30%;
+                
+                .pic {
+                    width: 100px;
+                    height: 100px;
+                    position: relative;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    margin-bottom: 40px;
+    
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+    
+               p {
+                   font-size: 16px;
+                   color: #1f464a;
+                   text-align: center;
+               }
+    
+    
+                
+            }
+        }
+    }
+}
+
+
+
 

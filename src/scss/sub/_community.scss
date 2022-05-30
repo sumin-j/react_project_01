@@ -129,7 +129,7 @@
             left: 30%;
             margin-right: 40px;
             border: none;
-            border-radius: 20px;
+            border-radius: 2px;
             background: #1f464a;
             color: #fff;
             font-size: 16px;
@@ -145,7 +145,7 @@
             border-radius: 4px;
             background: #efefef;
             box-shadow: 8px 8px 8px #d2cfcf;
-            padding: 12px;
+            padding: 20px;
             margin-bottom: 30px;
             input[type=text]{
                 width: 300px;
@@ -182,13 +182,14 @@
                 right: 0;
                 top:14px;
                 button {
+                    padding: 6px;
+                    margin-top: 6px;
                     margin-right: 12px;
                     border: none;
-                    border-radius: 20px;
+                    border-radius: 2px;
                     background: #1f464a;
                     color: #fff;
                     font-size: 14px;
-                    padding: 6px;
                 }
             }
         }
@@ -210,4 +211,161 @@
     transform: translate(-50%, -50%);
     pointer-events: none;
     transition: transform 0.5s;
+}
+
+@media screen and (max-width : $tablet) {
+    .insta {
+        padding: 60px 0;
+        .inner {
+            width: 100%;
+        }
+    
+        .swiper {
+            
+            .swiper-button-prev,
+            .swiper-button-next {
+                width: 30px;
+                height: 30px;
+        
+                &::after {
+                    font-size: 14px;
+                }
+            }
+            
+        }
+        span {
+            width: 100%;
+        }
+    }
+    
+    .faq {
+        width: 100%;
+        padding: 80px; 
+        position: relative;       
+    
+        .inputBox {
+            width: 50%;
+            height: 600px;
+            top: 35%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            h3 {
+                font-size: 28px;
+                color: #1f464a;
+                margin-bottom: 28px;
+                &::after {
+                    content: '';
+                    display: block;
+                    width: 60px;
+                    height: 2px;
+                    position: absolute;
+                    top: 60px;
+                    background: #1f464a;
+                }
+            }
+            span {
+                display: block;
+                font-size: 16px;
+                color: #aaa;
+                margin-bottom: 4px;
+            }
+            a {
+                display: block;
+                font-size: 18px;
+                margin-bottom: 60px;
+            }
+            input[type=text]{
+                width: 300px;
+                height: 30px;
+                position: relative;
+                left: 50%;
+                transform: translateX(-50%);
+                padding: 10px;
+                margin-bottom: 20px;
+            }
+            textarea {
+                width: 300px;
+                height: 260px;
+                position: relative;
+                left: 50%;
+                transform: translateX(-50%);
+                resize: none;
+                padding: 10px;
+                margin-bottom: 10px;
+            }
+            button {
+                position: relative;
+                top: 20px;
+                left: 30%;
+                margin-right: 40px;
+                border: none;
+                border-radius: 2px;
+                background: #1f464a;
+                color: #fff;
+                font-size: 16px;
+                padding: 6px;
+            }
+        }
+    
+        .showBox {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            article {
+                position: relative;
+                border-radius: 4px;
+                background: #efefef;
+                box-shadow: 8px 8px 8px #d2cfcf;
+                padding: 20px;
+                margin-bottom: 30px;
+                input[type=text]{
+                    width: 300px;
+                    height: 30px;
+                    position: absolute;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    padding: 10px;
+                    margin-bottom: 20px;
+                }
+                textarea {
+                    width: 300px;
+                    position: relative;
+                    top: 20px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    resize: none;
+                    padding: 10px;
+                    margin-bottom: 10px;
+                }
+                h2 {
+                    font-size: 26px;
+                    color: #1f464a;
+                    margin-bottom: 8px;
+                }
+                p {
+                    font-size: 18px;
+                    line-height: 1.2;
+                    color: #1f464a;
+                    margin-bottom: 12px;
+                }
+                .btns {
+                    position: absolute;
+                    right: 0;
+                    top:14px;
+                    button {
+                        padding: 6px;
+                        margin-top: 6px;
+                        margin-right: 12px;
+                        border: none;
+                        border-radius: 2px;
+                        background: #1f464a;
+                        color: #fff;
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    
+        
+    }
 }
